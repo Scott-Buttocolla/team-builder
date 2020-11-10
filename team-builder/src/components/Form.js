@@ -26,8 +26,6 @@ export default function Form(props) {
                         onChange={onChange}
                         value={values.name}
                         placeholder='Name'
-                        required
-                        autoFocus
                     />
                 </div>
 				{/* email */}
@@ -39,7 +37,6 @@ export default function Form(props) {
                         onChange={onChange}
                         value={values.email}
                         placeholder='Email'
-                        required
                     />
                 </div>
 				{/* job title */}
