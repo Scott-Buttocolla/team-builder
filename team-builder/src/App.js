@@ -52,13 +52,14 @@ export default function App() {
 	};
 
 	return (
-		<div className='App'>
-			<header className='App-header'>
+		<div className ='App'>
+			<header className ='App-header'>
 				<h1>Team Members</h1>
 			</header>
-			<Form values={formValues} 
-			update={updateForm} 
-			submit={submitForm} 
+			<Form 
+			values = {formValues} 
+			update = {updateForm} 
+			submit = {submitForm} 
 			/>
 
 			{teamMembers.map((teamMember) => {
