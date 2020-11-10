@@ -41,13 +41,14 @@ export default function App() {
 	};
 
 	const submitForm = () => {
-		let teamMember = {
+		const teamMember = {
 			name: formValues.name.trim(),
 			email: formValues.email.trim(),
 			jobTitle: formValues.jobTitle.trim(),
 			location: formValues.location,
 		};
 		setTeamMembers([...teamMembers, teamMember]);
+		setFormValues(initialFormValues);
 	};
 
 	return (
@@ -55,7 +56,10 @@ export default function App() {
 			<header className='App-header'>
 				<h1>Team Members</h1>
 			</header>
-			<Form values={formValues} update={updateForm} submit={submitForm} />
+			<Form values={formValues} 
+			update={updateForm} 
+			submit={submitForm} 
+			/>
 
 			{teamMembers.map((teamMember) => {
 				return <TeamMember details={teamMember} />;
