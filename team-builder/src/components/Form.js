@@ -7,7 +7,7 @@ export default function Form(props) {
         const { name, value } = evt.target;
         update(name, value);
     };
-
+// need to edit code so form clears on submit but doesn't reload the page.
     const onSubmit = (evt) => {
         evt.preventDefault()
         submit();
@@ -26,6 +26,7 @@ export default function Form(props) {
                         onChange={onChange}
                         value={values.name}
                         placeholder='Name'
+                        required
                     />
                 </div>
 				{/* email */}
@@ -37,6 +38,7 @@ export default function Form(props) {
                         onChange={onChange}
                         value={values.email}
                         placeholder='Email'
+                        required
                     />
                 </div>
 				{/* job title */}
@@ -48,13 +50,14 @@ export default function Form(props) {
                         onChange={onChange}
                         value={values.jobTitle}
                         placeholder='Job Title'
+                        required
                     />
                 </div>
 				{/* location */}
                 {/* dropdown menu*/}
                 <div className="form-line">
                     <label>Closest Location </label>
-                    <select name='location' value={values.location} onChange={onChange}>
+                    <select name='location' value={values.location} onChange={onChange} required>
                         <option value=''>--- Select Location ---</option>
                         <option value='1'>Champaign, IL</option>
                         <option value='2'>Los Angeles, CA</option>
