@@ -59,11 +59,11 @@ export default function Form(props) {
                     <label>Closest Location </label>
                     <select name='location' value={values.location} onChange={onChange} required>
                         <option value=''>--- Select Location ---</option>
-                        <option value='1'>Champaign, IL</option>
-                        <option value='2'>Los Angeles, CA</option>
-                        <option value='3'>Philadelphia, PA</option>
-                        <option value='4'>Abroad</option>
-                        <option value='5'>Remote</option>
+                        <option value='Champaign, IL'>Champaign, IL</option>
+                        <option value='Los Angeles, CA'>Los Angeles, CA</option>
+                        <option value='Philadelphia, PA'>Philadelphia, PA</option>
+                        <option value='Abroad'>Abroad</option>
+                        <option value='Remote'>Remote</option>
                     </select>
                 </div>
 			</div>
